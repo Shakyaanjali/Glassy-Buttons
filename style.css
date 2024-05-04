@@ -1,0 +1,95 @@
+/* author: https://codepen.io/ghaste/pen/RwOEMwO
+Amit */
+@import url("https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap");
+:root {
+  --h: 233;
+  --s: 90%;
+  --l: 90%;
+}
+
+html {
+  background: radial-gradient(farthest-side at -33.33% 50%, #0000 52%, #ba0c2e 54% 57%, #0000 59%) 0 calc(128px/2), radial-gradient(farthest-side at 50% 133.33%, #0000 52%, #ba0c2e 54% 57%, #0000 59%) calc(128px/2) 0, radial-gradient(farthest-side at 133.33% 50%, #0000 52%, #ba0c2e 54% 57%, #0000 59%), radial-gradient(farthest-side at 50% -33.33%, #0000 52%, #ba0c2e 54% 57%, #0000 59%), #ff0134;
+  background-size: calc(128px/4.667) 128px, 128px calc(128px/4.667);
+}
+
+.glassy {
+  all: unset;
+  text-align: center;
+  transition: 0.2s ease-in-out;
+  padding: 0.5em 0.8em;
+  background-color: #0000;
+  border-radius: 0.1em;
+  background-image: linear-gradient(#0003, #0000);
+  font-family: "Bowlby One SC", sans-serif;
+  font-size: 6vw;
+  color: hsl(var(--h) var(--s) var(--l)/0.5);
+  text-shadow: 0.05em 0.05em 0 #fff3, -0.05em -0.05em 0 #0003;
+  box-shadow: 0 -0.125em 0.25em #0002, 0 0.25em 0.25em hsl(var(--h) var(--s) var(--l)/0.5), 0 0 0 0.1em hsl(var(--h) var(--s) var(--l)/0.5), 0 0.175em 0.3em hsl(var(--h) var(--s) var(--l)/0.5) inset, 0 -0.025em 0.175em hsl(var(--h) var(--s) var(--l)/0.4) inset, 0 -0.25em 1em 0.3em hsl(var(--h) var(--s) var(--l)/0.3) inset, 0 0.6em 0 hsl(var(--h) var(--s) var(--l)/0.3) inset, 0 2em 1em #0004;
+  backdrop-filter: blur(0.05em);
+}
+.glassy:active {
+  backdrop-filter: blur(0.02em);
+  box-shadow: 0 -0.125em 0.25em #0002, 0 0.25em 0.25em hsl(var(--h) var(--s) var(--l)/0.5), 0 0 0 0.1em hsl(var(--h) var(--s) var(--l)/0.5), 0 0.175em 0.3em hsl(var(--h) var(--s) var(--l)/0.8) inset, 0 -0.025em 0.175em hsl(var(--h) var(--s) var(--l)/0.4) inset, 0 -0.25em 1em 0.3em hsl(var(--h) var(--s) var(--l)/0.3) inset, 0 0.6em 0 hsl(var(--h) var(--s) var(--l)/0.3) inset, 0 1em 0.5em #0004;
+  translate: 0 0.1em;
+}
+.glassy:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  width: 80%;
+  left: 10%;
+  height: 1.5em;
+  background-image: radial-gradient(100% 100% at center, hsl(var(--h), var(--s), 80%, 0.25), hsl(var(--h), var(--s), 80%, 0) 50%);
+}
+.glassy:after {
+  content: "";
+  inset: 0;
+  top: 0.5em;
+  position: absolute;
+  background-image: linear-gradient(105deg, transparent 20%, hsl(var(--h) var(--s) var(--l)/0.2) 20%, hsl(var(--h) var(--s) var(--l)/0.2) 30%, transparent 30%, transparent 32%, hsl(var(--h) var(--s) var(--l)/0.2) 5%, hsl(var(--h) var(--s) var(--l)/0.2) 40%, transparent 0%);
+  background-size: 400% 100%;
+  background-position: 100% 0%;
+  transition: 0.3s ease;
+}
+.glassy:active:after {
+  background-position: -50% 0%;
+}
+
+.glass2 {
+  all: unset;
+  --h: 333;
+  text-align: center;
+  transition: 0.2s ease-in-out;
+  padding: 0.5em 0.8em;
+  background-color: #0000;
+  background-image: linear-gradient(#0003, #0000);
+  font-family: "Bowlby One SC", sans-serif;
+  font-size: 6vw;
+  color: hsl(var(--h) var(--s) var(--l)/0.8);
+  text-shadow: 0.05em 0.05em 0 #fff3, -0.05em -0.05em 0 #0003;
+  border-radius: 0.25em;
+  box-shadow: inset 0 0.1em 0 0.06em hsl(var(--h) var(--s) var(--l)/0.4), inset 0 0 0.1em 0.1em hsl(var(--h) var(--s) var(--l)/0.4), 0 -0.4em 0 hsl(var(--h) var(--s) var(--l)/0.4) inset, 0 1em 0.5em -0.25em #0004;
+  backdrop-filter: blur(0.05em);
+  position: relative;
+}
+.glass2:active {
+  backdrop-filter: blur(0.02em);
+  box-shadow: inset 0 0.1em 0 0.06em hsl(var(--h) var(--s) var(--l)/0.4), inset 0 0 0.1em 0.1em hsl(var(--h) var(--s) var(--l)/0.4), 0 -0.4em 0 hsl(var(--h) var(--s) var(--l)/0.4) inset, 0 0.7em 0.5em -0.25em #0004;
+  translate: 0 0.1em;
+}
+.glass2:before {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  inset: 0.2em;
+  opacity: 0.5;
+  background: url("#");
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  gap: 10em;
+}
